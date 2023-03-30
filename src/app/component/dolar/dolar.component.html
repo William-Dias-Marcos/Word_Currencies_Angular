@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="show" class="container">
   <div class="jumbotron text-center" style="padding-top: 150px">
     <h1 class="">Dólar</h1>
     <main class="lead">Descubra qual é a cotação do dólar hoje:</main>
@@ -8,7 +8,7 @@
         type="number"
         class="btn btn-secongary"
         id="brDolar"
-        placeholder="0 USD"
+        placeholder="1 USD"
         style="width: 140px"
       />
       <input
@@ -21,7 +21,7 @@
         type="number"
         class="btn btn-secongary"
         id="brDolar"
-        placeholder="0 BRL"
+        placeholder="{{ currency.USDBRL.ask | currency }}"
         style="width: 140px"
       />
     </div>
@@ -31,7 +31,8 @@
     <h5 class="text-center m-4">Esse valor do dólar é atualizado?</h5>
 
     <p>
-      A cotação do dolar hoje está R$ 5,29. Cotação do dólar comercial americano
+      A cotação do dolar hoje está
+      {{ currency.USDBRL.ask | currency }}. Cotação do dólar comercial americano
       atualizada sempre para que você fique informado sobre o dólar e tome as
       melhores decisões.
     </p>
@@ -95,7 +96,7 @@
       Nas décadas de 1980 e 1990, muitos economistas viam, com grande simpatia,
       a dolarização da economia brasileira como forma de romper o círculo
       vicioso da inflação, que, à época, já podia ser considerada hiperinflação.
-      Adotando o dólar como lastro para a moeda nacional, o Brasil poderia se
+      Adotando o dólar como lastro para a moeda nacional, o Brasil USDBRLria se
       ver livre do tão terrível dragão inflacionário. Outros economistas tinham
       receio na adoção dessa solução, principalmente quando viram a Argentina
       sofrer com a incapacidade de pagamento, resultando no abandono desse
