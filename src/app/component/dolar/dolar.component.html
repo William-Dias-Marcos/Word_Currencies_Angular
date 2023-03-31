@@ -9,25 +9,26 @@
         <input
           type="number"
           class="form-control"
-          value="1"
+          value="{{ valueInputUSD }}"
+          #USD
+          (change)="calculateConversionUSD(USD.value)"
           aria-label="dolar"
           aria-describedby="addon-wrapping"
         />
       </div>
 
-      <input
-        type="button"
-        class="btn btn-primary m-3"
-        style="height: 50px"
-        value="Converter"
-      />
+      <button type="button" class="btn btn-primary m-3" style="height: 50px">
+        Converter
+      </button>
 
       <div class="input-group" style="width: 140px">
         <span class="input-group-text" id="addon-wrapping">R$</span>
         <input
           type="number"
           class="form-control"
-          value="1"
+          value="{{ valueInputBRL }}"
+          #BRL
+          (change)="calculateConversionBRL(BRL.value)"
           aria-label="real"
           aria-describedby="addon-wrapping"
         />
