@@ -12,19 +12,22 @@ export class DolarComponent {
 
   show = false;
 
-  valueInputBRL: number = 0;
-  valueInputUSD: number = 0;
+  valueInputBRL: any = '';
+  valueInputUSD: any = '';
 
   calculateConversionUSD(dolar: any) {
     let USD = this.currency.USDBRL.ask;
-
     this.valueInputBRL = USD * dolar;
   }
 
   calculateConversionBRL(real: any) {
     let USD = this.currency.USDBRL.ask;
-
     this.valueInputUSD = real / USD;
+  }
+
+  clearInput() {
+    this.calculateConversionUSD(0);
+    this.calculateConversionBRL(0);
   }
 
   constructor(private currencyService: CurrencyService) {
