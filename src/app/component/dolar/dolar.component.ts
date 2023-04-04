@@ -12,29 +12,27 @@ export class DolarComponent {
 
   show = false;
 
-  valueInputBRL: any = '';
-  valueInputUSD: any = '';
+  valueInputBRL: number = 0;
+  valueInputUSD: number = 0;
 
-  calculateConversionUSD(dolar: any) {
+  calculateConversionUSD() {
     let USD = this.currency.USDBRL.ask;
-    this.valueInputBRL = USD * dolar;
+    this.valueInputBRL = USD * this.valueInputUSD;
   }
 
-  calculateConversionBRL(real: any) {
+  calculateConversionBRL() {
     let USD = this.currency.USDBRL.ask;
-    this.valueInputUSD = real / USD;
+    this.valueInputUSD = this.valueInputBRL / USD;
   }
 
   clearInput() {
-    this.calculateConversionUSD(0);
-    this.calculateConversionBRL(0);
+    this.valueInputBRL = 0;
+    this.valueInputUSD = 0;
   }
 
   constructor(private currencyService: CurrencyService) {
     this.getWordCurrencys();
   }
-
-  ngOnInit(): void {}
 
   getWordCurrencys(): void {
     this.currencyService

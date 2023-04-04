@@ -11,24 +11,22 @@
           onkeypress="return event.charCode >= 48"
           min="1"
           class="form-control"
-          placeholder="0"
-          value="{{ valueInputUSD }}"
-          #USD
-          (change)="calculateConversionUSD(USD.value)"
+          [(ngModel)]="valueInputUSD"
+          (change)="calculateConversionUSD()"
           aria-label="dolar"
           aria-describedby="addon-wrapping"
         />
       </div>
 
       <div>
-        <button type="button" class="btn btn-primary m-1" style="height: 50px">
+        <button type="button" class="btn btn-primary m-2" style="height: 50px">
           Calcular
         </button>
 
         <button
           (click)="clearInput()"
           type="button"
-          class="btn btn-danger m-1"
+          class="btn btn-danger m-2"
           style="height: 50px"
         >
           Limpar
@@ -42,10 +40,8 @@
           onkeypress="return event.charCode >= 48"
           min="1"
           class="form-control"
-          placeholder="0"
-          value="{{ valueInputBRL }}"
-          #BRL
-          (change)="calculateConversionBRL(BRL.value)"
+          [(ngModel)]="valueInputBRL"
+          (change)="calculateConversionBRL()"
           aria-label="real"
           aria-describedby="addon-wrapping"
         />
