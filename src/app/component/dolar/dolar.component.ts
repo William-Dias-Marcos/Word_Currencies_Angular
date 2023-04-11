@@ -12,22 +12,26 @@ export class DolarComponent {
 
   show = false;
 
-  valueInputBRL: number = 0;
-  valueInputUSD: number = 0;
+  valueInputBRL: any;
+  valueInputUSD: any;
 
   calculateConversionUSD() {
     let USD = this.currency.USDBRL.ask;
-    this.valueInputBRL = USD * this.valueInputUSD;
+    let result = USD * this.valueInputUSD;
+
+    this.valueInputBRL = result.toFixed(2);
   }
 
   calculateConversionBRL() {
     let USD = this.currency.USDBRL.ask;
-    this.valueInputUSD = this.valueInputBRL / USD;
+    let result = this.valueInputBRL / USD;
+
+    this.valueInputUSD = result.toFixed(2);
   }
 
   clearInput() {
-    this.valueInputBRL = 0;
-    this.valueInputUSD = 0;
+    this.valueInputBRL = '';
+    this.valueInputUSD = '';
   }
 
   constructor(private currencyService: CurrencyService) {
