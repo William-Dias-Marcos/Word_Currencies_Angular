@@ -1,1 +1,100 @@
-<p>euro works!</p>
+<div *ngIf="show" class="container">
+  <div class="jumbotron text-center" style="padding-top: 100px">
+    <h1>Euro</h1>
+    <main class="lead">Descubra qual é a cotação do euro hoje:</main>
+
+    <div class="container-bottons">
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">€</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputEUR"
+          (change)="calculateConversionUSD()"
+          aria-label="euro"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary m-2" style="height: 50px">
+          Calcular
+        </button>
+
+        <button
+          (click)="clearInput()"
+          type="button"
+          class="btn btn-danger m-2"
+          style="height: 50px"
+        >
+          Limpar
+        </button>
+      </div>
+
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">R$</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputBRL"
+          (change)="calculateConversionBRL()"
+          aria-label="real"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="m-3 text-justify">
+    <h5 class="text-center m-4">Esse valor do euro é atualizado?</h5>
+
+    <p>
+      A cotação do euro hoje está
+      {{ currency.EURBRL.ask | currency }}. O valor do euro é atualizado todos
+      os dias para você ficar informado sobre o preço do dólar e tomar as
+      melhores decisões.
+    </p>
+
+    <h5 class="text-center m-4">Sobre o Euro</h5>
+    <p>
+      Euro é a moeda oficial da zona Euro, a qual é constituída por 20 dos 27
+      estados-membros da União Europeia: Alemanha, Áustria, Bélgica, Chipre,
+      Croácia, Eslováquia, Eslovénia, Espanha, Estónia, Finlândia, França,
+      Grécia, Irlanda, Itália, Letónia, Lituânia, Luxemburgo, Malta, Países
+      Baixos, Portugal e Polônia.[4][5] A moeda é também usada de forma oficial
+      pelas instituições da União Europeia e por quatro outros países europeus
+      e, de forma unilateral, pelo Cosovo e Montenegro. Em 2018, a moeda foi
+      usada diariamente por cerca de 343 milhões de europeus.[6] A moeda é
+      também usada oficialmente em diversos territórios ultramarinos da UE.
+    </p>
+
+    <h5 class="text-center m-4">Historia do euro</h5>
+
+    <p>
+      A ideia do estabelecimento de uma moeda única na CEE nasceu já na década
+      de 70. Teve como principais defensores os Economistas Fred Arditti, Neil
+      Dowling, Wim Duisenberg, Robert Mundell, Tommaso Padoa-Schioppa e Robert
+      Tollison. No entanto, só pelo Tratado de Maastricht, de 1992 esta ideia
+      passou da teoria para o Direito. Este tratado foi celebrado pelos doze
+      países que à data faziam parte da Comunidade Económica Europeia. O Reino
+      Unido e a Dinamarca optaram neste tratado por ficar de fora da moeda
+      única. Os países que aderissem posteriormente à União estão legalmente
+      obrigados a aderir à moeda única. A Suécia aderiu à União em 1995 mas
+      negociou entrar numa fase posterior. Os critérios para adesão à nova moeda
+      única foram estabelecidos pelo Pacto de Estabilidade e Crescimento de
+      1997.
+    </p>
+
+    <p>
+      O primeiro nome para o sistema de conversão entre as moedas que se uniriam
+      foi o ECU (European Currency Unit em Inglês). O nome de Euro é atribuído
+      ao Belga German Pirloit que assim o sugeriu a Jacques Santer em 1995. O
+      valor da nova moeda foi ancorado ao do ECU por resolução do Conselho da
+      União Europeia de 31 de dezembro de 1998. Esta entrou em vigor a 1 de
+      janeiro de 1999 em forma não material (transferências, cheques, etc.) e a
+      1 de janeiro de 2002 em notas e moedas.
+    </p>
+  </div>
+</div>

@@ -1,1 +1,119 @@
-<p>bitcoin works!</p>
+<div *ngIf="show" class="container">
+  <div class="jumbotron text-center" style="padding-top: 100px">
+    <h1>Bitcoin</h1>
+    <main class="lead">Descubra qual é a cotação do bitcoin hoje:</main>
+
+    <div class="container-bottons">
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">₿</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputBTC"
+          (change)="calculateConversionUSD()"
+          aria-label="euro"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary m-2" style="height: 50px">
+          Calcular
+        </button>
+
+        <button
+          (click)="clearInput()"
+          type="button"
+          class="btn btn-danger m-2"
+          style="height: 50px"
+        >
+          Limpar
+        </button>
+      </div>
+
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">R$</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputBRL"
+          (change)="calculateConversionBRL()"
+          aria-label="real"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="m-3 text-justify">
+    <h5 class="text-center m-4">Esse valor do bitcoin é atualizado?</h5>
+
+    <p>
+      A cotação do bitcoin hoje está
+      {{ currency.BTCBRL.ask | currency }}. O valor do bitcoiné atualizado todos
+      os dias para você ficar informado sobre o preço do bitcoin e tomar as
+      melhores decisões.
+    </p>
+
+    <h5 class="text-center m-4">Sobre o bitcoin</h5>
+    <p>
+      Bitcoin é uma criptomoeda livre e descentralizada, um dinheiro eletrônico
+      para transações financeiras ponto a ponto (sem
+      intermediários),originalmente descrita em um artigo por um programador ou
+      grupo de programadores sob o pseudônimo Satoshi Nakamoto,publicado em 31
+      de outubro de 2008 na lista de discussão The Cryptography Mailing. Bitcoin
+      é considerada a primeira moeda digital mundial descentralizada,
+      constituindo um sistema econômico alternativo, e responsável pelo
+      ressurgimento do sistema bancário livre.
+    </p>
+
+    <h5 class="text-center m-4">Historia do bitcoin</h5>
+
+    <p>
+      O Bitcoin surgiu em 31 de outubro de 2008. Naquele dia, o criador (ou
+      criadores) da criptomoeda, que se esconde sob o pseudônimo de Satoshi
+      Nakamoto, enviou um e-mail para uma lista de pessoas interessadas em
+      criptografia. No corpo da mensagem, ele escreveu que vinha trabalhando “em
+      um novo sistema de dinheiro eletrônico totalmente peer-to-peer, sem
+      terceiros confiáveis”.
+    </p>
+
+    <p>
+      Ele também inseriu um link com o white paper (manual) da criptomoeda, em
+      inglês. No documento, com nove páginas, Nakamoto descreveu resumidamente
+      os fundamentos do Bitcoin, baseados em quatro pontos principais:
+    </p>
+
+    <p>
+      É uma rede peer-to-peer para evitar o gasto duplo (possibilidade de enviar
+      as mesmas moedas mais de uma vez); sem intermediários, como bancos;
+      permite o anonimato dos participantes; e usa Prova de Trabalho (um tipo de
+      algoritmo) para gerar Bitcoin (processo que ganhou o nome de mineração) e
+      prevenir o tal gasto duplo.
+    </p>
+
+    <p>
+      No manual, Nakamoto também estipulou que o BTC tem oferta finita. No
+      total, apenas 21 milhões de unidades podem ser mineradas (criadas) até
+      2140, o que o torna escasso. Até o final de outubro de 2021, segundo o
+      agregador Coingecko, 18,8 milhões de Bitcoin já haviam sido emitidas.
+    </p>
+
+    <p>
+      Apesar de o Bitcoin ter sido lançado no final de 2008, o primeiro bloco
+      (nome do arquivo com informações sobre transações) da blockchain da
+      criptomoeda só foi minerado no dia 3 de janeiro de 2009. No bloco, chamado
+      de Gênese, Nakamoto escreveu a mensagem criptografada “The Times
+      03/Jan/2009 Chancellor on brink of second bailout for banks”.
+    </p>
+
+    <p>
+      O texto, que em português significa “Chanceler à beira do segundo resgate
+      aos bancos”, é uma alusão à manchete do jornal britânico The Times daquele
+      dia. As palavras foram interpretadas como um indicativo das motivações que
+      teriam levado Nakamoto a criar a criptomoeda.
+    </p>
+  </div>
+</div>

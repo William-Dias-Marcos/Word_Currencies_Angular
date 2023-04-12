@@ -1,1 +1,121 @@
-<p>libra works!</p>
+<div *ngIf="show" class="container">
+  <div class="jumbotron text-center" style="padding-top: 100px">
+    <h1>Libra</h1>
+    <main class="lead">Descubra qual é a cotação da libra hoje:</main>
+
+    <div class="container-bottons">
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">£</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputGBP"
+          (change)="calculateConversionUSD()"
+          aria-label="dolar"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary m-2" style="height: 50px">
+          Calcular
+        </button>
+
+        <button
+          (click)="clearInput()"
+          type="button"
+          class="btn btn-danger m-2"
+          style="height: 50px"
+        >
+          Limpar
+        </button>
+      </div>
+
+      <div class="input-group" style="width: 160px">
+        <span class="input-group-text" id="addon-wrapping">R$</span>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="valueInputBRL"
+          (change)="calculateConversionBRL()"
+          aria-label="real"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="m-3 text-justify">
+    <h5 class="text-center m-4">Esse valor da libra é atualizado?</h5>
+
+    <p>
+      A cotação da libra hoje está
+      {{ currency.GBPBRL.ask | currency }}. O valor da libra esterlina é
+      atualizado todos os dias para você ficar informado sobre o preço da libra
+      e tomar as melhores decisões.
+    </p>
+
+    <h5 class="text-center m-4">Sobre a libra</h5>
+    <p>
+      A Libra Esterlina é a moeda atual e oficial do Reino Unido (Inglaterra,
+      Escócia, País de Gales e Irlanda do Norte). A libra esterlina também é a
+      moeda oficial dos territórios britânicos ultramarinos (Ilhas Cayman, Ilhas
+      Malvinas, Bermudas, Anguilla, Gibraltar, Ilhas Virgens Britânicas, Ilhas
+      Pitcairn, Geórgia do Sul, Santa Helena e Monte Serrat).
+    </p>
+
+    <h5 class="text-center m-4">Historia da libra</h5>
+
+    <p>
+      A libra esterlina é formalmente chamada de pound sterling e apenas pound,
+      no uso comum do dia a dia. Essa, que é a moeda mais antiga do mundo, teve
+      seu primeiro esboço ainda na Roma antiga, que emprestou a palavra em latim
+      poundus que significa “peso”, dando início a uma história que se estende
+      até hoje.
+    </p>
+
+    <p>
+      Durante muito tempo a palavra “pound” foi utilizada como um termo geral
+      para nomear diversas unidades monetárias que circulavam pela Europa.
+      Durante a era da Inglaterra Anglo-Saxã, o lastro da libra era de acordo
+      com o peso da prata (e não de acordo com o ouro, como acontece
+      atualmente).
+    </p>
+
+    <p>
+      Somente muitos anos depois, o primeiro rei da Inglaterra, Athelstan,
+      instaurou em 928 D.C a libra como primeira moeda nacional oficial. Apesar
+      desse marco importante, foi apenas no século XII que o nome da moeda
+      recebeu seu complemento e passou a se chamar oficialmente libra esterlina.
+    </p>
+
+    <p>
+      Nessa época, os reis David I, da Escócia, e Henrique II, da Inglaterra,
+      decidiram unificar suas moedas e encontraram na libra esterlina o
+      significado ideal. O termo sterling provém do francês antigo esterlin, que
+      significa indestrutível, forte, duro – tudo o que uma moeda deveria ser. A
+      partir de então pequenas mudanças foram ocorrendo e cunharam a libra como
+      moeda mais forte no mundo.
+    </p>
+
+    <p></p>
+    <ul>
+      <li>
+        1561: durante o reinado da rainha Isabel I a libra esterlina passou a
+        circular em todos os territórios do Reino Unido;
+      </li>
+      <li>
+        1694: o rei William III criou o Banco da Inglaterra e instaurou o uso de
+        notas, além das moedas já existentes;
+      </li>
+      <li>
+        1717: Sir Isaac Newton implementa o padrão ouro e a libra esterlina
+        passa a ter seu valor referente ao ouro e não mais à prata. A ideia era
+        que um país deveria ter a mesma quantidade de dinheiro em circulação que
+        o ouro que possuía guardado.
+      </li>
+    </ul>
+  </div>
+</div>
