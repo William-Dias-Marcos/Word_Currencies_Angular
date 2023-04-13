@@ -34,7 +34,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Angular
 - TypeScript
 - API de moedas do AwesomeApi
-- CSS
+- Bootstrap
 - HTML
 - Hospedagem na Hostgator
 
