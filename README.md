@@ -1,27 +1,49 @@
-# WordCurrenciesAngular
+<h1 align="center"> Word Currencies </h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## 💻 Sobre o projeto
 
-## Development server
+💵 Word Currencies é um conversor de moedas online.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+https://wordcurrencies.netlify.app/
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ⚙️ Funcionalidades
 
-## Build
+- [x] Tabela para consultar as principais moedas mundiais:
+- [x] Permite fazer a conversão entre as moedas:
+- [x] Apresenta um breve resumo das moedas disponíveis:
+- [x] Disponível para todos os dispositivos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 📱 Layout da Aplicação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ <p text  align="center">
+<img img width= "700" src= ""> 
+</p>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- Angular
+- TypeScript
+- API de moedas do AwesomeApi
+- CSS
+- HTML
+- Hospedagem na Hostgator
+
+
+---
+
+## 👨🏼‍💻 Autor
+
+William Dias Marcos
+
+ <a href = "mailto:william.diasmarcos@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"        target="_blank"></a>
+ <a href="https://www.linkedin.com/in/william-dias-marcos-25981a192" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
