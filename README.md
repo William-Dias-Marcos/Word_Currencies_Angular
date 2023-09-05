@@ -23,8 +23,6 @@ https://wordcurrencies.netlify.app/
 <img img width= "700" src= "https://github.com/William-Dias-Marcos/Word_Currencies_Angular/blob/main/to-readme/wordCurrencies.gif"> 
 </p>
 
-
-
 ---
 
 ## 🛠 Tecnologias
@@ -36,8 +34,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - API de moedas do AwesomeApi
 - Bootstrap
 - HTML
-- Hospedagem na Hostgator
-
 
 ---
 
